@@ -73,7 +73,7 @@ def tf_idf(doc_info, count):
             file = open(file_path, 'r', encoding='utf-8')
             content = file.read().strip()
             content = content.lower()
-            if d in content:
+            if d in content:#you need to use harsh
                 i += int(1)
         idf_scores[d] = math.log(24 / i)
         temp = {'tf_scores': tf_scores, 'idf_scores': idf_scores}
